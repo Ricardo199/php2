@@ -8,10 +8,15 @@ if(isset($_REQUEST['cmdEnviar'])){
     $preferencias= $_REQUEST['preferencias'];
     $direccion= $_REQUEST['direccion'];
     echo "Informacion recolectada<br>";
-    echo "Nombre: ".$nombres."<br>Apellidos: ".$apellidos."<br> Fecha de nacimiento: ".$fechaNacimiento."<br>Sueldo: ".$sueldo."<br>Preferencias: <br>";
+    echo "Nombre: ".$nombres.
+    "<br>Apellidos: ".$apellidos.
+    "<br> Fecha de nacimiento: ".$fechaNacimiento.
+    "<br>Sueldo: ".$sueldo.
+    "<br>Preferencias: <br>";
     foreach($preferencias as $pre){
         echo "<ul><li>".$pre."</li></ul>";
-    };
-    echo "<br>Dirección: ".$direccion;
+    }
+    echo "<br>Dirección: ".$direccion."<br>";
+    echo date("h:i:sa");
 }
 ?>
